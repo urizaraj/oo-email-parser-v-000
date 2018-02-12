@@ -7,6 +7,6 @@ class EmailParser
   attr_accessor :emails
 
   def initialize(email_string)
-    email_string.split(/[, ]+/)
+    email_ar = email_string.split(/[, ]+/)
   end
 end
