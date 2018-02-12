@@ -4,7 +4,7 @@
 # or whitespace (' ').
 
 class EmailParser
-  EMAILS = []
+  @emails = []
 
   def initialize(email_string)
     email_ar = email_string.split(/[, ]+/)
