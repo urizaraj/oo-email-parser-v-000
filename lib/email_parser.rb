@@ -4,19 +4,16 @@
 # or whitespace (' ').
 require 'pry'
 class EmailParser
-  @emails = []
+  attr_accessor = :emails
 
-  def initialize(email_string)
-    email_ar = email_string.split(/[, ]+/)
-
-    email_ar.each { |email| @emails << email }
+  def initialize(emails)
+    self.emails = emails
   end
 
   def parse
+    list = self.emails.split(/[, ]+/)
     result = []
-    @emails.each do |email|
-      result << email if !@emails.include?(email)
-    end
+    list.each { |email| result << email if !result.include?(email) }
     result
   end
 end
