@@ -9,4 +9,8 @@ class EmailParser
   def initialize(email_string)
     email_ar = email_string.split(/[, ]+/)
   end
+
+  def parse
+
+  end
 end
