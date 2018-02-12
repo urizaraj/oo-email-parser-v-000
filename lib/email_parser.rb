@@ -11,7 +11,7 @@ class EmailParser
     email_ar.each { |email| EMAILS << email }
   end
 
-  def parse
+  def self.parse
     result = []
     EMAILS.each do |email|
       result << email if !EMAILS.include?(email)
