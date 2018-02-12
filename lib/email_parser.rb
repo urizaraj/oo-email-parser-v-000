@@ -14,7 +14,7 @@ class EmailParser
   def parse
     result = []
     @emails.each do |email|
-      result << email if !EMAILS.include?(email)
+      result << email if !@emails.include?(email)
     end
     result
   end
